@@ -1,5 +1,5 @@
 export default {
-	title: "Eleventy Base Blog v9",
+	title: "Blog by 11ty",
 	url: "https://example.com/",
 	language: "en",
 	description: "I am writing about my experiences as a naval navel-gazer.",

@@ -5,12 +5,23 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
 
       - name: Install Dependencies 📦
         run: npm install
@@ -21,6 +32,5 @@ jobs:
       - name: Deploy 🚀
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: \${{ secrets.GH_PAGES_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
-
