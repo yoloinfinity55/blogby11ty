@@ -1,3 +1,6 @@
+---
+layout: layouts/base.njk
+---
 # 11ty Crash Course: Part 1
 
 This video tutorial introduces Eleventy (11ty), a popular static site generator, emphasizing its "no batteries included" philosophy which gives developers more control over project setup compared to tools like Astro. The guide walks through the initial steps of setting up an 11ty project, including creating a package.json file and installing Eleventy as a development dependency. A significant portion of the crash course focuses on leveraging Nunjucks templating within HTML files, which enables features like defining layouts for consistent page structure and using includes to separate components like the head tag. Furthermore, the tutorial demonstrates advanced templating concepts such as Nunjucks blocks and extensions, which allow developers to override specific sections of a base layout for specialized pages, ensuring a scalable and efficient site architecture.
